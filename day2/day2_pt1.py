@@ -1,4 +1,4 @@
-from parse import search
+from parse_input import parse_input
 
 ideal = {
     'red': 12,
@@ -6,20 +6,6 @@ ideal = {
     'blue': 14,
     'total': 39,
 }
-
-def parse_input(hint):
-    hand = {}
-    hand['red'] = parse_hint(hint,"red")
-    hand['green'] = parse_hint(hint,"green")
-    hand['blue'] = parse_hint(hint,"blue")
-    hand['total'] = hand['red'] + hand['blue'] + hand['green']
-    return hand
-
-def parse_hint(hint, color):
-    r = search("{:d} " + color, hint)
-    if r is None: 
-        return 0
-    return r[0]
 
 def main():
     f = open("../input/input_2.txt", "r")
