@@ -17,7 +17,6 @@ class Game:
         return sum(self.card_copies)
             
 
-
 class Card:
     def __init__(self, card_info):
         self.winning, self.yours = self.split_numbers(card_info)
