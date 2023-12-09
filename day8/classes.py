@@ -45,8 +45,6 @@ class Map:
             if i >= len(self.directions): i = 0
 
     def traverse(self):
-        paths = []
-        for node in self.start_nodes:
-            paths.append(self.follow_path(node))
-        
+        paths = [paths.append(self.follow_path(node)) for node in self.start_nodes]
+
         return lcm(*paths)
